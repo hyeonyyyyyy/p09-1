@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>농업용수저수지 통합수질관리시스템 운영관리</title>	
+	<link rel="stylesheet" type="text/css" href="css/BasicSet.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/ui.js"></script>
+</head>
+
+<body>
+
+<div id="nong_m_wrap"> 
+	<!-- UI-ISC-M-HOM-000 검색 -->
+	<div class="reservoir_search">
+		<div class="search_keyword_wrap">
+			<select name="" id="">
+				<option value="">저수지명</option>
+				<option value="">주소</option>
+			</select>
+			<div class="search_inp_wrap">
+				<input type="text" placeholder="장소를 검색해보세요." id="search_keyword">			
+				<button class="btn_search_keyword"><span class="blind">검색</span></button>
+			</div>
+		</div>
+		<button class="btn_reservoir_add"><p>주요염원</p> 등록</button>
+	</div>
+
+	<!-- [팝업] 검색결과 : 상세 : 선택( UI-ISC-M-LIS-010 ) -->
+	<div class="pop_layer pop_result_view" style="display: block;">
+		<div class="top_cont">
+			<div class="status_wrap">
+				<button class="btn_prev_page"><span class="blind">이전</span></button>
+				<h2>이동 저수지</h2>
+				<button class="btn_pop_layer_close"><span class="blind">닫기</span></button>
+			</div>
+			<div class="function_wrap">
+				<dl class="add_info">
+					<!-- 231222 텍스트 수정 -->
+					<dd>이동읍 어버리 1335-2 / 한우 / 100마리</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="pop_cont">
+			<div class="group_info_tit"><span>축산계</span></div>		
+			<!-- 231222 수정 시작 -->
+			<div class="pollu_inp PdT10">
+				<p>조사년도</p>
+				<select>
+					<option>2023</option>
+				</select>
+			</div>	
+				<div class="sub_tit">
+					<p>기본 정보</p>
+					<span></span>
+				</div>
+				<ul class="group_form">
+					<li>
+						<p>본부</p>
+						<input type="text" disabled value="인천/경기">
+					</li>
+					<li>
+						<p>지사</p>
+						<input type="text" disabled value="OO지사">
+					</li>
+					<li>
+						<p>시설명</p>
+						<input type="text" disabled value="방동">
+					</li>
+                    <li>
+					</li>
+				</ul>
+				<div class="sub_tit">
+					<p>오염원 정보</p>
+					<span></span>
+				</div>
+				<ul class="group_form">
+					<li>
+						<p>주오염원</p>
+						<input type="text" disabled value="축산계">
+					</li>
+					<li>
+						<p>오염원명칭</p>
+						<input type="text" disabled value="돼지">
+					</li>
+					<li>
+						<p>규모</p>
+							<input type="text" disabled value="100" class="W80p"> <span>두</span>
+					</li>
+                    <li>
+					</li>
+				</ul>
+				<div class="sub_tit">
+					<p>위치 정보</p>
+					<span></span>
+				</div>
+				<ul class="group_form">
+					<li>
+						<p>X좌표</p>
+						<input type="text" disabled value="41.40338">
+					</li>
+					<li>
+						<p>Y좌표</p>
+						<input type="text" disabled value="2.17403">
+					</li>
+					<li>
+						<p>주소</p>
+						<div class="flex_btn_wrap">
+							<input type="text" disabled value="경기 용인시 처인구 이동읍 어비리 1335-2">
+							<button class="btn_02">지도로<br>보기</button>
+						</div>
+					</li>
+				</ul>
+				<!-- 231222 수정 끝 -->
+			<div class="unitDiv">
+				<!-- 231222 MgT40추가 -->
+				<div class="picList MgT40">
+					<div class="unitPic"><img src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Test Img"></div>
+					<div class="unitPic"><img src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Test Img"></div>
+					<div class="unitPic"><img src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Test Img"></div>
+					<div class="unitPic"></div>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<button class="btn_01">수정</button>
+				<button class="btn_01 blue">최신 정보 등록</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- UI-ISC-M-HOM-000 하단 버튼 영역 -->
+	<div class="location_wrap">
+		<button class="btn_location_list">내 주변 저수지 목록 보기</button>
+		<button class="btn_location_my"><span class="blind">현위치 이동</span></button>
+	</div>
+
+	<!-- UI-ISC-M-HOM-000 지도영역 -->
+	<div class="nong_map">
+		<img src="images/icon_my_location_map.png" alt="내 위치" style="top: 400px; left: 180px;" class="my_location_point">
+		<img src="images/map_sample01.gif" alt="지도 샘플 이미지" style="width: 100%; height: 100%;">
+	</div>
+
+</div>
+
+</body>
+</html>
+
